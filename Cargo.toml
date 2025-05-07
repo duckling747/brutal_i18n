@@ -1,0 +1,18 @@
+[package]
+name = "brutal_i18n"
+authors = ["Arttu Mykkänen"]
+description = "A very nonchalant i18n library, inspired by rust-i18n: load a YAML file for some compile time action, and then use the t! macro to get translation texts at runtime."
+version = "0.1.0"
+edition = "2021"
+licence = ""
+keywords = ["i18n", "l10n", "internationalization", "localization", "macro", "translation"]
+
+[dependencies]
+serde = "1.0"
+serde_yaml = "0.9"
+proc-macro2 = "1.0"
+quote = "1.0"
+syn = { version = "2.0", features = ["full"] }
+
+[lib]
+proc-macro = true
