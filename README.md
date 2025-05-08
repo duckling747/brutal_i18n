@@ -17,6 +17,7 @@ A nonchalant, disturbingly simplistic and brutal i18n library, directly inspired
 - Ignored area codes.
 - Panics if a key is not found in the translation file.
 - Works with Strings and str slices, and probably some other types that implement `as_ref`.
+- Might very well work in no_std environments (this is not tested and not explicitly supported yet).
 
 ## What's the same compared to rust-i18n (at the time of writing):
 
