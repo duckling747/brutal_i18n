@@ -47,3 +47,12 @@ let locales = brutal_i18n::available_locales!();
 ```
 
 Only supports one yaml translation file. All translation keys must be found, otherwise panic.
+
+## YAML file looks like
+
+```yaml
+key:
+    en: key
+    fi: avain
+    ko: 열쇠
+```
