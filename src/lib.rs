@@ -11,6 +11,8 @@ use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::path::PathBuf;
 
+use core::panic;
+
 struct I18nInput {
     file: LitStr,
     fallback: LitStr,
@@ -116,7 +118,10 @@ pub fn i18n(input: TokenStream) -> TokenStream {
         }
     }
     let mut available_locales_vec: Vec<String> = available_locales_set.into_iter().collect();
-    available_locales_vec.sort();
+
+    // sort it, doesn't need to be stable
+    available_locales_vec.sort_unstable();
+
     let available_locales_tokens = available_locales_vec.iter().map(|loc| {
         LitStr::new(loc, Span::call_site())
     });
@@ -170,6 +175,9 @@ impl Parse for TInput {
     }
 }
 
+/**
+ * t as in translate. Usage: t!(<key>, locale=<locale>).
+ */
 #[proc_macro]
 pub fn t(input: TokenStream) -> TokenStream {
     let TInput { key, locale } = parse_macro_input!(input as TInput);
@@ -179,6 +187,9 @@ pub fn t(input: TokenStream) -> TokenStream {
     TokenStream::from(expanded)
 }
 
+/**
+ * Get all locales found in the translation file. Returns a sorted &[&str].
+ */
 #[proc_macro]
 pub fn available_locales(_input: TokenStream) -> TokenStream {
     let expanded = quote! {
