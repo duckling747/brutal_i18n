@@ -142,8 +142,8 @@ pub fn i18n(input: TokenStream) -> TokenStream {
                 }
             }
 
-            pub fn available_locales() -> Vec<&'static str> {
-                vec![#( #available_locales_tokens ),*]
+            pub fn available_locales() -> &'static [&'static str] {
+                &[#( #available_locales_tokens ),*]
             }
         }
     };
