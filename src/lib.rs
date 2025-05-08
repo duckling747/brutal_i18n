@@ -176,7 +176,7 @@ impl Parse for TInput {
 }
 
 /**
- * t as in translate. Usage: t!(<key>, locale=<locale>).
+ * t as in translate. Usage: t!(_key_, locale=_locale_).
  */
 #[proc_macro]
 pub fn t(input: TokenStream) -> TokenStream {
