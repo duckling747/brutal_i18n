@@ -2,7 +2,7 @@
 name = "brutal_i18n"
 authors = ["Arttu Mykkänen"]
 description = "A nonchalant i18n library, inspired by rust-i18n; load a YAML file for some compile time action, get translation texts at runtime."
-version = "0.3.0"
+version = "0.3.1"
 edition = "2021"
 license = "MIT"
 keywords = ["i18n", "l10n", "internationalization", "localization", "translation"]
