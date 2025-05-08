@@ -22,6 +22,7 @@ A nonchalant, disturbingly simplistic and brutal i18n library, directly inspired
 
 - Replaces text blocks at compile time.
 - Macros have similar functions and similar names.
+- Supports a single YAML file that contains your replacement text blocks (translations).
 
 ## Examples
 TODO
