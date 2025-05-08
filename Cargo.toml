@@ -5,7 +5,7 @@ description = "A nonchalant i18n library, inspired by rust-i18n; load a YAML fil
 version = "0.3.0"
 edition = "2021"
 license = "MIT"
-keywords = ["i18n", "l10n", "internationalization", "localization", "macro", "translation"]
+keywords = ["i18n", "l10n", "internationalization", "localization", "translation"]
 
 [dependencies]
 serde = "1.0"
