@@ -188,7 +188,7 @@ pub fn t(input: TokenStream) -> TokenStream {
 }
 
 /**
- * Get all locales found in the translation file. Returns a sorted &[&str].
+ * Get all locales found in the translation file. Returns a sorted &\[&str\].
  */
 #[proc_macro]
 pub fn available_locales(_input: TokenStream) -> TokenStream {
