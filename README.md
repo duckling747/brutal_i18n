@@ -25,5 +25,25 @@ A nonchalant, disturbingly simplistic and brutal i18n library, directly inspired
 - Macros have similar functions and similar names.
 - Supports a single YAML file that contains your replacement text blocks (translations).
 
-## Examples
-TODO
+## How to use
+
+```rust
+// Give it the translation file first:
+brutal_i18n::i18n!(
+    "localization/translations.yaml",
+    fallback = "en"
+);
+
+// Then use it somewhere:
+brutal_i18n::t!(
+    "tennis",
+    locale = "en"
+);
+
+// Get a list of all locales:
+let locales = brutal_i18n::available_locales!();
+
+// Do stuff with it...
+```
+
+Only supports one yaml translation file. All translation keys must be found, otherwise panic.
